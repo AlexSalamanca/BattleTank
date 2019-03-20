@@ -4,6 +4,7 @@
 #include "TankAimingComponent.h"
 #include "BattleTank.h"
 #include "TankTurret.h"
+#include "TankMovementComponent.h"
 #include "Projectile.h"
 #include "TankBarrel.h"
 
