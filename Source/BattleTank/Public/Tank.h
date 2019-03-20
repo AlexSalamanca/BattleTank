@@ -33,6 +33,9 @@ private:
 
 	UTankBarrel* Barrel = nullptr;
 
+	float ReloadTime = 3.0f;
+	double LastFire = 0.0f;
+
 public:
 	void AimAt(FVector HitLocation);
 	
