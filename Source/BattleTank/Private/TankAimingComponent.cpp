@@ -23,9 +23,9 @@ void UTankAimingComponent::BeginPlay() {
 
 void UTankAimingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction * ThisTickFunction)
 {
-	if ((FPlatformTime::Seconds() - LastFire) < ReloadTime) { FiringState = EFiringState::Reloading; }
-	else if (IsBarrelMoving()) { FiringState = EFiringState::Aiming; }
-	else { FiringState = EFiringState::Locked; }
+	if ((FPlatformTime::Seconds() - LastFire) < ReloadTime) FiringState = EFiringState::Reloading;
+	else if (IsBarrelMoving()) FiringState = EFiringState::Aiming;
+	else FiringState = EFiringState::Locked;
 }
 
 void UTankAimingComponent::Initialise(UTankBarrel * BarrelToSet, UTankTurret * TurretToSet)
