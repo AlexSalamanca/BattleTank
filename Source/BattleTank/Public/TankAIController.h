@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "AIController.h"
 #include "GameFramework/PlayerController.h"
+#include "Runtime/AIModule/Classes/AIController.h"
 #include "TankAIController.generated.h"
 
 /**
@@ -20,5 +21,7 @@ private:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
-	float AcceptanceRadius = 3000;//How close the AI tank can get to the player
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	float AcceptanceRadius = 15000;//How close the AI tank can get to the player
 };
