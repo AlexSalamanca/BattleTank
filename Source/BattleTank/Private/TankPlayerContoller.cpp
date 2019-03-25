@@ -6,12 +6,7 @@
 
 void ATankPlayerContoller::BeginPlay() {
 	Super::BeginPlay();
-
-	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
-	if (ensure(AimingComponent))
-		FoundAimingComponent(AimingComponent);
-	else
-		return;
+	
 }
 
 void ATankPlayerContoller::Tick(float DeltaTime) {

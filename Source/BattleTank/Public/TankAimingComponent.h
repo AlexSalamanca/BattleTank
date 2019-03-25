@@ -37,7 +37,7 @@ public:
 	EFiringState GetFiringState() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Firing")
-	int GetRoundsLeft() const;
+	int32 GetRoundsLeft() const;
 
 private:
 	// Sets default values for this component's properties
@@ -60,10 +60,11 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float ReloadTime = 3.0f;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+	int32 RoundsLeft = 3;
+
 	double LastFire = 0.0f;
 	FVector AimDirection;
-
-	int RoundsLeft = 3;
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
