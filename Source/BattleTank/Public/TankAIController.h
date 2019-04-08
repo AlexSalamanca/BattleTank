@@ -6,6 +6,7 @@
 #include "AIController.h"
 #include "GameFramework/PlayerController.h"
 #include "Runtime/AIModule/Classes/AIController.h"
+#include "Runtime/Engine/Classes/GameFramework/Controller.h"
 #include "TankAIController.generated.h"
 
 /**
